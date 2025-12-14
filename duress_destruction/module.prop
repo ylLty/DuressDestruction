@@ -1,6 +1,7 @@
 id = duress_destruction
-name = 音量键格机 | 胁迫销毁
+name = 音量键格机 | 胁迫销毁 - Duress Destruction
 version = v0.0.1 (1)
 versionCode = 1
-author = Duress Destruction dev
-description = 在开机动画显示时以特定方式按下音量键即可格机，以销毁您的隐私。详见文档 https://example.com （按下操作按钮也可打开）
+author = yl_lty
+description = 在开机动画显示时以特定方式按下音量键即可擦除 Data 分区，以销毁您的隐私数据。详见文档 https://github.com/ylLty/DuressDestruction/ （按下操作按钮也可打开）
+updateJson = https://raw.githubusercontent.com/ylLty/DuressDestruction/refs/heads/master/updateJson.json
