@@ -1,10 +1,12 @@
 #!/system/bin/sh
 
+# Copyright (C) 2025  yl_lty
+
 # 打开默认浏览器访问 GitHub 仓库
 am start -a android.intent.action.VIEW -d "https://github.com/ylLty/DuressDestruction/"
 
 # 状态变量
-MODULE_STATUS='😋 准备就绪'
+MODULE_STATUS='😋 准备就绪!'
 
 update_module_status() {
     [ -z "$MODULE_STATUS" ] && return 0
