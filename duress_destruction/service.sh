@@ -149,7 +149,7 @@ while true; do
     KEY_SEQ="${KEY_SEQ}${KEY}"
 
     # 限制长度，防止无限增长
-    KEY_SEQ=$(echo "$KEY_SEQ" | tail -c 4)
+    KEY_SEQ=$(echo "$KEY_SEQ" | tail -c 16)
 
     # === 核心判断：是否包含 +-+- ===
     case "$KEY_SEQ" in
