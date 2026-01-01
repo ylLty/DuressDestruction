@@ -42,7 +42,18 @@ MODULE_STATUS='⏳ 初始化中...'
 update_module_status
 
 MODULE_DIR="/data/adb/modules/duress_destruction"
+SEQ=""
+DESTROY_SEQ="+-+-"
+BOOT_VOLUME_HINTED=0
 
+is_booting() {
+    [ "$(getprop init.svc.bootanim)" != "stopped" ]
+}
+
+append_key() {
+    SEQ="${SEQ}$1"
+    [ ${#SEQ} -gt 20 ] && SEQ="${SEQ#?}"
+}
 run_destroy(){
     MODULE_STATUS='😈 开始销毁数据'
     update_module_status
@@ -53,3 +64,42 @@ MODULE_STATUS='😋 准备就绪!'
 update_module_status
 
 # 检测逻辑
+getevent -l | while read -r line; do
+    case "$line" in
+        *KEY_VOLUMEUP*"DOWN"*)
+            key="+"
+            ;;
+        *KEY_VOLUMEDOWN*"DOWN"*)
+            key="-"
+            ;;
+        *KEY_POWER*"DOWN"*)
+            key="*"
+            ;;
+        *)
+            continue
+            ;;
+    esac
+
+    # 只记录音量键和电源键
+    append_key "$key"
+
+    # ===== 开机中 + 锁屏界面音量键提示逻辑 =====
+    if is_booting; then
+        if [ "$key" = "+" ] || [ "$key" = "-" ]; then
+            if [ "$BOOT_VOLUME_HINTED" -eq 0 ]; then
+                MODULE_STATUS='🤔 检测到了音量键操作，但不是销毁操作'
+                update_module_status
+                BOOT_VOLUME_HINTED=1
+            fi
+        fi
+    fi
+    # ============================================
+
+    # 命中 +-+- → 无条件执行销毁
+    case "$SEQ" in
+        *"$DESTROY_SEQ"*)
+            run_destroy
+            exit 0
+            ;;
+    esac
+done

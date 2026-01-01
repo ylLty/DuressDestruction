@@ -1,4 +1,5 @@
 <div align="center">
+## 💣🔒
 
 # 音量键格机 | 胁迫销毁 - Duress Destruction
 
@@ -16,7 +17,7 @@
 
 ## 🌀 传送门
 
-[![TGgroup](https://img.shields.io/badge/Telegram-%E4%B8%AD%E6%96%87%E4%BA%A4%E6%B5%81%E7%BE%A4%E7%BB%84-blue?style=flat-square)](https://t.me/+2rtNA0mDDnczMjU9)  [![BilibiliVideo](https://img.shields.io/badge/bilibili-%E4%BB%8B%E7%BB%8D%E8%A7%86%E9%A2%91-pink?style=flat-square)](https://www.bilibili.com) 
+[![TGgroup](https://img.shields.io/badge/Telegram-%E4%B8%AD%E6%96%87%E4%BA%A4%E6%B5%81%E7%BE%A4%E7%BB%84-blue?style=flat-square)](https://t.me/+2rtNA0mDDnczMjU9)  [![BilibiliVideo](https://img.shields.io/badge/bilibili-%E4%BB%8B%E7%BB%8D%E8%A7%86%E9%A2%91-pink?style=flat-square)](https://www.bilibili.com) [![BilibiliSpace](https://img.shields.io/badge/bilibili-%E4%BD%9C%E8%80%85%E4%B8%BB%E9%A1%B5-pink?style=flat-square)](https://space.bilibili.com/474686923)
 
 ## 📖  目录
 

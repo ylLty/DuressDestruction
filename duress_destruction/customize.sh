@@ -8,12 +8,12 @@ MODULE_DESCRIPTION="在开机或锁屏时以特定方式按下音量键即可销
 
 # 显示模块信息
 show_module_info() {
-    echo "********************************************"
-    echo "  $MODULE_NAME"
-    echo "  版本: $MODULE_VERSION"
-    echo "  作者: $MODULE_AUTHOR"
-    echo "  描述: $MODULE_DESCRIPTION"
-    echo "********************************************"
+    ui_print "********************************************"
+    ui_print "  $MODULE_NAME"
+    ui_print "  版本: $MODULE_VERSION"
+    ui_print "  作者: $MODULE_AUTHOR"
+    ui_print "  描述: $MODULE_DESCRIPTION"
+    ui_print "********************************************"
 }
 
 
